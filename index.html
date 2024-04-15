@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head title="Laboratory 1">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <div class="img-container">
+                <h1>DOTA 2</h1>
+                <img src="dota2.jpg" alt="DOTA 2 background image">
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index2.html">About</a></li>
+                <li><a href="index3.html">My Favourite Heroes</a></li>
+                <li><a href="https://steamcommunity.com/profiles/76561199002941395/">My Steam</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <h2>Defence of the Ancients</h2>
+                <p><b>Дота</b> - сучасний багатокористувацький шедевр, як написано на офіційному сайті</p>
+                <br>
+                <p>Всім нам начхати, що саме там написано на офіційному сайті, тож давайте порунемося і розберемося в грі "Дота 2"</p>
+            </article>
+            <aside>
+                <h2>Мій особистий досвід</h2>
+                <p>Я награв більше <i>3000 годин<i>, тож я розуміюся на цій темі</p>
+                <br>
+                <p>Я вважаю Доту витвором сучасного мистецтва, бо таких ігор, які затягують люждей на тисячі годин дуже мало. Але все одно не став би рекомендувати її, бо тратити тисячі годин на таке безглуздя просто крінж for real</p>
+            </aside>
+        </main>
+        <h2 style="margin: 20px;">Звук шаленства</h2>
+    <audio controls style="margin: 20px;">
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <h2 style="margin: 20px;">Live Dota 2 footage: </h2>
+    <video controls width="400" height="300" style="margin: 20px;">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <br>
+    <h2 style="margin: 20px;">Frame example: </h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wQ9oCG5joFU?si=JsRqLmmFHJWFfkoR&amp;start=58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2>Форма з використанням елементів datetime, email, tel, url</h2>
+    <form id="my-form" action="#" method="post">
+        <label for="date">Дата і час:</label><br>
+        <input type="datetime-local" id="date" name="date" required><br><br>
+    
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+    
+        <label for="phone">Телефон:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="+380123456784" required><br><br>
+    
+        <label for="website">Веб-сайт:</label><br>
+        <input type="url" id="website" name="website" required><br><br>
+    
+        <input type="submit" value="Submit">
+    </form>
+    <div class="deforming-element" id="deformingElement"></div>
+        <footer>
+            <p>
+                Footer footer 
+                <br>
+                дякую за увагу!
+            </p>
+        </footer>
+        <script>
+            document.getElementById("my-form").addEventListener("submit", function(event) {
+                event.preventDefault(); 
+                var date = document.getElementById("date").value;
+                var email = document.getElementById("email").value;
+                var phone = document.getElementById("phone").value;
+                var website = document.getElementById("website").value;
+            
+                var message = "Дата і час: " + date + "\n" +
+                              "Email: " + email + "\n" +
+                              "Телефон: " + phone + "\n" +
+                              "Веб-сайт: " + website;
+            
+                alert(message);
+            });
+            </script>
+    </body>
+</html>

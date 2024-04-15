@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    background: linear-gradient(to right, #183717c8, #7b1c25)
+}
+
+header, footer, nav, main, article, aside, section {
+    margin: 10px;
+    padding: 10px;
+    flex-shrink: 0; 
+}
+
+header {
+    background-color: #f0f0f0;
+    text-align: center;
+    font-size: xx-large;
+}
+
+header:hover .img-container img {
+    opacity: 1;
+}
+
+.img-container img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.img-container h1 {
+    background-color: black;
+    position: absolute;
+    padding: auto;
+    margin: 0;
+    top: 446px;
+    left: 45%;
+    color: rgb(255, 255, 255); 
+    text-align: center; 
+    z-index: 999; 
+
+}
+
+nav {
+    background-color: #333; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    justify-content: space-around; 
+    background-color: #333; 
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;  
+    color: white; 
+    font-size: large;
+    background-color: #333; 
+    padding: 10px 15px; 
+}
+
+nav ul li a:hover {
+    background-color: #555; /
+}
+
+
+main {
+    display: flex;
+    flex: 1;
+}
+.fav-heroes {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 10px; 
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.FavHeroes img {
+    border-radius: 30px;
+}
+
+article, aside {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    margin-top: auto; 
+}
+
+.deforming-element {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.deforming-element:hover {
+    transform: scaleX(2) scaleY(0.5);
+}
